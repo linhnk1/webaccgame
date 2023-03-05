@@ -245,7 +245,7 @@
                 <div class="text-red-600 font-bold text-lg text-center mb-3 p-3 uppercase border-b border-gray-300">
                     Thông báo
                 </div>
-                <span class="absolute cursor-pointer text-2xl text-gray-800 pt-3 px-3" onclick="FuncHideModal()"
+                <span class="absolute cursor-pointer text-2xl text-gray-800 pt-3 px-3" data-dismiss="modal"
                     style="right: -1px; top: -2px;"><i class="bx bxs-x-square"></i></span>
             </div>
             <div class="modal-content">
