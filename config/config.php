@@ -1,6 +1,6 @@
 <?php
 session_start();
-$base_url = 'https://test2.tuanorii.online/'; // Thay url web bạn
+$base_url = 'http://websellacc-env.eba-djpsvcvz.ap-southeast-1.elasticbeanstalk.com/'; // Thay url web bạn
 class CMSNT
 {
     private $ketnoi;
@@ -8,7 +8,7 @@ class CMSNT
     {
         if (!$this->ketnoi)
         {
-            $this->ketnoi = mysqli_connect('localhost', 'btshxuct_abc', 'btshxuct_abc', 'btshxuct_abc') or die ('Vui lòng kết nối đến DATABASE');
+            $this->ketnoi = mysqli_connect('sql12.freesqldatabase.com', 'sql12603133', 'JGXilA2QiH', 'sql12603133') or die ('Vui lòng kết nối đến DATABASE');
             mysqli_query($this->ketnoi, "set names 'utf8'");
         }
     }
