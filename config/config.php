@@ -8,7 +8,7 @@ class CMSNT
     {
         if (!$this->ketnoi)
         {
-            $this->ketnoi = mysqli_connect('sql12.freesqldatabase.com', 'sql12603407', '1PFa5NTFM6', 'sql12603407') or die ('Vui lòng kết nối đến DATABASE');
+            $this->ketnoi = mysqli_connect('127.0.0.1', 'linhnk1', 'Abc12345!', 'websellacc') or die ('Vui lòng kết nối đến DATABASE');
             mysqli_query($this->ketnoi, "set names 'utf8'");
         }
     }
