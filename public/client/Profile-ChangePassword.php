@@ -7,12 +7,12 @@
     CheckLogin();
 ?>
 <div class="w-full max-w-6xl mx-auto pt-6 md:pt-8 pb-8">
-    <div class="grid grid-cols-8 gap-4 md:p-4 bg-box-dark">
+    <div class="grid grid-cols-8 gap-4">
         <?php require_once('Sidebar.php');?>
         <div class="col-span-8 sm:col-span-5 md:col-span-6 lg:col-span-6 xl:col-span-6 px-2 md:px-0">
             <div class="v-bg w-full mb-5">
                 <h2
-                    class="v-title border-l-4 border-red-800 px-3 select-none text-white text-xl md:text-2xl font-bold">
+                    class="v-title border-l-4 border-gray-800 px-3 select-none text-gray-800 text-xl md:text-2xl font-bold">
                     ĐỔI MẬT KHẨU</h2>
                 <div class="v-table-content">
                     <div class="py-3 pt-5">

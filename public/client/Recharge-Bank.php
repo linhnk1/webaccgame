@@ -7,15 +7,15 @@
     CheckLogin();
 ?>
 <div class="w-full max-w-6xl mx-auto pt-6 md:pt-8 pb-8">
-    <div class="grid grid-cols-8 gap-4 md:p-4 bg-box-dark">
+    <div class="grid grid-cols-8 gap-4">
         <?php require_once('Sidebar.php');?>
         <div class="col-span-8 sm:col-span-5 md:col-span-6 lg:col-span-6 xl:col-span-6 px-2 md:px-0">
             <div class="w-full mb-10">
                 <h2
-                    class="v-title uppercase border-l-4 border-red-800 px-3 select-none text-white text-xl md:text-2xl font-bold">
+                    class="v-title uppercase border-l-4 border-gray-800 px-3 select-none text-gray-800 text-xl md:text-2xl font-bold">
                     Nạp tiền qua ATM/MOMO
                 </h2>
-                <div class="mt-4 text-white">
+                <div class="mt-4 text-gray-900">
                     <div class="p-2 border border-gray-300 mb-4">
                         <div class="flex justify-between items-center cursor-pointer">
                             <div class="flex select-none"><img src="<?=BASE_URL('assets/img/');?>bank.png"
@@ -39,13 +39,13 @@
                                     <p>&nbsp;</p>
                                     <p><strong>THÔNG TIN TÀI KHOẢN NGÂN HÀNG</strong></p>
                                     <?php foreach($CMSNT->get_list("SELECT * FROM `bank` ") as $bank) { ?>
-                                    <p style="margin-left: 0px;"><span style="color: green;"><strong>✔ :&nbsp;
+                                    <p style="margin-left: 0px;"><span style="color: rgb(43, 0, 254);"><strong>✔ :&nbsp;
                                                 <?=$bank['name'];?></strong></span></p>
                                     <p style="margin-left: 0px;"><strong>Chủ tài khoản:
                                             <?=$bank['bank_name'];?></strong>
                                     </p>
                                     <p style="margin-left: 0px;"><strong>STK/SDT: </strong><span
-                                            style="color: yellow;"><strong><?=$bank['stk'];?></strong></span></p>
+                                            style="color: red;"><strong><?=$bank['stk'];?></strong></span></p>
                                     <p style="margin-left: 0px;"><strong><?=$bank['ghichu'];?></strong></p>
                                     <p style="margin-left: 0px;">&nbsp;</p>
                                     <?php }?>

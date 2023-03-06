@@ -6,7 +6,7 @@
         require_once("../../public/client/Nav.php");
 ?>
 <?php
-/* ĐƠN VỊ CRACK WEB CMSNAV.NET | ZALO 0855569336 | FB.COM/ANHVUVPS */
+/* BẢN QUYỀN THUỘC VỀ CMSNT.CO | NTTHANH LEADER NT TEAM */
 if(isset($_GET['id']))
 {
     $row = $CMSNT->get_row(" SELECT * FROM `category_caythue` WHERE `id` = '".check_string($_GET['id'])."'  ");
@@ -23,31 +23,24 @@ else
 ?>
 
 
-<div class="mt-12 relative w-full max-w-6xl mx-auto text-gray-800 pb-8 px-2 md:px-0 ">
-    <div class="mb-4 py-4 md:p-4 bg-box-dark">
-        <div
-            class="fade-in mb-2 py-2 md:mb-4 block uppercase md:py-4 text-center text-yellow-400 md:text-3xl text-2xl font-extrabold text-fill ">
-            <?=$row['title'];?>
+<div class="mt-12 relative w-full max-w-6xl mx-auto text-gray-800 pb-8 px-2 md:px-0">
+    <div class="sticky col-span-12 grid grid-cols-10 gap-2 select-none py-2 px-2 color-grant text-xl font-bold rounded"
+        style="background: rgb(37 37 37); top: 60px; index: 98;">
+        <div class="col-span-12 md:col-span-12 text-center">
+        DỊCH VỤ: <?=$row['title'];?>
         </div>
-        <div class="mb-6"><span class="mx-auto block w-40 border-2 border-red-500 "></span>
-        </div>
-        <div
-            class="sticky col-span-12 grid grid-cols-10 gap-2 select-none py-2 px-2 color-grant text-xl font-bold rounded">
-            <div class="col-span-12 md:col-span-12 text-center">
-                SỐ TIỀN CẦN THANH TOÁN: <b id="thanhtoan">0</b>đ
-            </div>
-        </div>
+    </div>
+    <div class="mt-4">
         <div class="v-account-detail p-2 md:px-0 mt-5">
-            <div class="v-infomations ">
+            <div class="v-infomations border-t border-b border-gray-700 py-4 mb-10">
                 <div class="py-3 px-5">
                     <span class="mb-2 block">
                         <div class="flex items-center relative">
-                            <select id="dichvu" onchange="showPrice()"
+                            <select id="dichvu"
                                 class="border border-gray-500 rounded bg-white text-gray-800 appearance-none w-full py-2 px-3 leading-tight focus:outline-none">
-                                <option data-money="0" value="">* Chọn gói cần mua</option>
+                                <option value="">* Chọn gói cần mua</option>
                                 <?php foreach($CMSNT->get_list("SELECT * FROM `groups_caythue` WHERE `category` = '".$row['id']."' ") as $group) {?>
-                                <option data-money="<?=$group['money'];?>" value="<?=$group['id'];?>">
-                                    <?=$group['title'];?></option>
+                                <option value="<?=$group['id'];?>"><?=$group['title'];?></option>
                                 <?php }?>
                             </select>
                             <div
@@ -76,48 +69,45 @@ else
                                 class="border border-gray-500 rounded bg-white text-gray-800 appearance-none w-full py-2 px-3 leading-tight focus:outline-none"></textarea>
                         </div>
                     </span>
-                    <center class="mt-4"><button type="button" id="Submit"
-                            class="uppercase flex w-50 font-semibold rounded items-center justify-center h-10 text-white text-xl rounded-none focus:outline-none px-4 text-center bg-red-500 hover:bg-red-600">
-                            <i class="fa fa-cart-plus mr-1" aria-hidden="true"></i>THANH TOÁN
+                    <div class="mt-4 text-center"><button type="button" id="Submit"
+                            class="uppercase flex w-40 font-semibold rounded items-center justify-center h-10 text-white text-xl rounded-none focus:outline-none px-4 text-center bg-red-500 hover:bg-red-600">
+                            ĐẶT HÀNG
                         </button>
-                    </center>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
+        <div class="v-account-detail p-2 md:px-0 mt-4">
+            <div class="v-account-detail-1" id="taikhoan">
+                <div class="mb-10">
+                    <img src="<?=BASE_URL($row['img']);?>" data-sizes="auto" class="border border-gray-400 mb-2 w-full lazyLoad lazy" />
+                </div>
             </div>
         </div>
-        </div>
-            </div>
-        </div>
+    </div>
+</div>
 
 
 
-<script>
-    function showPrice() {
-        var ketqua = $('#dichvu').children('option:selected').attr('data-money').replace(/(.)(?=(\d{3})+$)/g, '$1.');
-        $("#thanhtoan").html(ketqua);
-    }
-</script>
 <script type="text/javascript">
-    $("#Submit").on("click", function() {
+$("#Submit").on("click", function() {
 
-        $('#Submit').html('ĐANG XỬ LÝ').prop('disabled',
-            true);
-        $.ajax({
-            url: "<?= BASE_URL("assets/ajaxs/CayThue.php"); ?>",
-            method: "POST",
-            data: {
-                type: 'Order',
-                tk: $("#tk").val(),
-                mk: $("#mk").val(),
-                ghichu: $("#ghichu").val(),
-                dichvu: $("#dichvu").val()
-            },
+    $('#Submit').html('ĐANG XỬ LÝ').prop('disabled',
+        true);
+    $.ajax({
+        url: "<?=BASE_URL("assets/ajaxs/CayThue.php");?>",
+        method: "POST",
+        data: {
+            type: 'Order',
+            tk: $("#tk").val(),
+            mk: $("#mk").val(),
+            ghichu: $("#ghichu").val(),
+            dichvu: $("#dichvu").val()
+        },
         success: function(response) {
             $("#thongbao").html(response);
             $('#Submit').html(
-                    '<i class="fa fa-cart-plus mr-1" aria-hidden="true"></i>THANH TOÁN')
+                    'ĐẶT HÀNG')
                 .prop('disabled', false);
         }
     });

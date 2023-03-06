@@ -4,7 +4,6 @@
     $title = 'THAY ĐỔI MẬT KHẨU | '.$CMSNT->site('tenweb');
     require_once("../../public/client/Header.php");
     //require_once("../../public/client/Nav.php");
-    /* ĐƠN VỊ CRACK WEB CMSNAV.NET | ZALO 0855569336 | FB.COM/ANHVUVPS */
 ?>
 
 <header>
@@ -92,6 +91,7 @@ $("#ChangePassword").on("click", function() {
     });
 });
 </script>
+
 
 <?php 
     require_once("../../public/client/Footer.php");

@@ -7,7 +7,7 @@
     CheckLogin();
 ?>
 <div class="w-full max-w-6xl mx-auto pt-6 md:pt-8 pb-8">
-    <div class="grid grid-cols-8 gap-4 md:p-4 bg-box-dark">
+    <div class="grid grid-cols-8 gap-4">
         <?php require_once('Sidebar.php');?>
         <div class="col-span-8 sm:col-span-5 md:col-span-6 lg:col-span-6 xl:col-span-6 px-2 md:px-0">
             <div class="w-full mb-2">
@@ -15,7 +15,7 @@
                     <span>
                         <form method="POST" class="w-full">
                             <h2
-                                class="v-title border-l-4 border-red-800 px-3 select-none text-white text-xl md:text-2xl font-bold">
+                                class="v-title border-l-4 border-gray-800 px-3 select-none text-gray-800 text-xl md:text-2xl font-bold">
                                 KHU NẠP THẺ
                             </h2>
                             <div class="py-3 px-5">
@@ -80,7 +80,7 @@
             </div>
             <div class="v-bg w-full mb-2 px-2">
                 <h2
-                    class="v-title border-l-4 border-red-800 px-3 select-none text-white text-xl md:text-2xl font-bold">
+                    class="v-title border-l-4 border-gray-800 px-3 select-none text-gray-800 text-xl md:text-2xl font-bold">
                     LỊCH SỬ NẠP THẺ
                 </h2>
                 <div class="v-table-content select-text">
@@ -88,25 +88,25 @@
                         <table id="datatable" class="table-auto w-full scrolling-touch min-w-850">
                             <thead>
                                 <tr class="v-border-hr select-none border-b-2 border-gray-300">
-                                    <th class="v-table-title py-2 text-sm font-bold text-white text-left px-1">
+                                    <th class="v-table-title py-2 text-sm font-bold text-gray-800 text-left px-1">
                                         STT
                                     </th>
-                                    <th class="v-table-title py-2 text-sm font-bold text-white text-left px-1">
+                                    <th class="v-table-title py-2 text-sm font-bold text-gray-800 text-left px-1">
                                         NHÀ MẠNG
                                     </th>
-                                    <th class="v-table-title py-2 text-sm font-bold text-white text-left px-1">
+                                    <th class="v-table-title py-2 text-sm font-bold text-gray-800 text-left px-1">
                                         M.GIÁ/T.NHẬN
                                     </th>
-                                    <th class="v-table-title py-2 text-sm font-bold text-white text-left px-1">
+                                    <th class="v-table-title py-2 text-sm font-bold text-gray-800 text-left px-1">
                                         MÃ THẺ
                                     </th>
-                                    <th class="v-table-title py-2 text-sm font-bold text-white text-left px-1">
+                                    <th class="v-table-title py-2 text-sm font-bold text-gray-800 text-left px-1">
                                         SERIAL THẺ
                                     </th>
-                                    <th class="v-table-title py-2 text-sm font-bold text-white text-left px-1">
+                                    <th class="v-table-title py-2 text-sm font-bold text-gray-800 text-left px-1">
                                         TRẠNG THÁI
                                     </th>
-                                    <th class="v-table-title py-2 text-sm font-bold text-white text-left px-1">
+                                    <th class="v-table-title py-2 text-sm font-bold text-gray-800 text-left px-1">
                                         NẠP LÚC
                                     </th>
                                 </tr>
@@ -128,7 +128,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="v-table-note mt-1 py-1 font-semibold text-white text-sm">
+                    <div class="v-table-note mt-1 py-1 font-semibold text-gray-800 text-sm">
                         Dùng điện thoại <i class="bx bxs-mobile"></i>, hãy vuốt bảng từ phải qua trái (<i
                             class="bx bxs-arrow-from-right"></i>) để xem đầy đủ thông tin!
                     </div>
@@ -139,9 +139,10 @@
 </div>
 </div>
 
+<!-- ĐƠN VỊ THIẾT KẾ WEB WWW.CMSNT.CO | ZALO: 0947838128 | FACEBOOK: FB.COM/NTGTANETWORK -->
 <script type="text/javascript">
 $("#NapThe").on("click", function() {
-    $('#NapThe').html('<i class="fa fa-spinner fa-spin"></i> ĐANG XỬ LÝ').prop('disabled',
+    $('#NapThe').html('ĐANG XỬ LÝ').prop('disabled',
         true);
     $.ajax({
         url: "<?=BASE_URL("assets/ajaxs/NapThe.php");?>",

@@ -10,7 +10,7 @@ function format_date($time){
 function card24h($api_card, $loaithe, $menhgia, $seri, $pin, $code)
 {
     $callback = BASE_URL('api/card.php');
-    $url_api = 'https://nhanthecao.vn/';
+    $url_api = 'https://card1s.top/';
     $json = json_decode(curl_get($url_api.'api/card-auto.php?auto=true&type='.$loaithe.'&menhgia='.$menhgia.'&seri='.$seri.'&pin='.$pin.'&APIKey='.$api_card.'&callback='.$callback.'&content='.$code), true);
     return $json;
 }

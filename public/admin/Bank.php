@@ -115,12 +115,20 @@ if(isset($_POST['btnSaveOption']) && $getUser['level'] == 'admin')
                                     </div>
                                 </div>
                             </div>
-                        
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">API Bank cần Auto</label>
+                                <div class="col-sm-9">
+                                    <div class="form-line">
+                                        <input type="text" name="api_bank" value="<?=$CMSNT->site('api_bank');?>"
+                                            class="form-control">
+                                    </div>
+                                </div>
+                            </div>
                             <div class="form-group row">
                                 <label class="col-sm-3 col-form-label">STK Bank cần Auto</label>
                                 <div class="col-sm-9">
                                     <div class="form-line">
-                                        <input type="text" name="stk_bank" value="<?=$CMSNT->site('stk_bank');?>"
+                                        <input type="text" name="api_bank" value="<?=$CMSNT->site('api_bank');?>"
                                             class="form-control">
                                     </div>
                                 </div>
@@ -135,7 +143,7 @@ if(isset($_POST['btnSaveOption']) && $getUser['level'] == 'admin')
                                 </div>
                             </div>
                             <div class="form-group">
-                            <p>Đăng ký tài khoản API: <a href="https://api.web2m.com/Register.html" target="_blank">Xem Ngay</a></p>
+                            <p>Đăng ký tài khoản API: <a href="https://api.web2m.com/Register.html?ref=113" target="_blank">Xem Ngay</a></p>
                             </div>
                             <hr>
                             <div class="form-group row">

@@ -1,1 +1,1 @@
-<?=file_get_contents("https://nhanthecao.vn/api/menhgia2.php");?>
+<?=file_get_contents("https://card24h.com/api/menhgia2.php");?>

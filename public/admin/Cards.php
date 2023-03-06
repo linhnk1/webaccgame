@@ -50,8 +50,8 @@ if(isset($_POST['btnSaveOption']) && $getUser['level'] == 'admin')
                     <div class="card-body">
                         <form action="" method="POST">
                             <div class="form-group row">
-                                <label class="col-sm-3 col-form-label">API Nạp Thẻ [<a href="https://nhanthecao.vn/"
-                                        target="_blank">NHANTHECAO.VN</a>]</label>
+                                <label class="col-sm-3 col-form-label">API Nạp Thẻ [<a href="https://card1s.top/Ket-noi-api/"
+                                        target="_blank">CARD1S.TOP</a>]</label>
                                 <div class="col-sm-9">
                                     <div class="form-line">
                                         <input type="text" name="api_card" value="<?=$CMSNT->site('api_card');?>"

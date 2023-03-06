@@ -43,7 +43,7 @@ if(isset($_POST['btnCongTien']) && isset($_POST['value']) && isset($row['usernam
     }
     else
     {
-        admin_msg_error("Vui lòng liên hệ kỹ thuật Zalo 0812665001", "", 12000);
+        admin_msg_error("Vui lòng liên hệ kỹ thuật Zalo 0984848592", "", 12000);
     }
     
 }
@@ -71,7 +71,7 @@ if(isset($_POST['btnTruTien']) && isset($_POST['value']) && isset($row['username
     }
     else
     {
-        admin_msg_error("Vui lòng liên hệ kỹ thuật Zalo 0812665001", "", 12000);
+        admin_msg_error("Vui lòng liên hệ kỹ thuật Zalo 0947838128", "", 12000);
     }
     
 }
@@ -87,12 +87,6 @@ if(isset($_POST['btnSaveUser']) && isset($_GET['id']) && $getUser['level'] == 'a
     $level = check_string($_POST['level']);
     $banned = check_string($_POST['banned']);
     $password = check_string($_POST['password']);
-    if($password != $row['password'])
-    {
-        $CMSNT->update("users", array(
-            'password'      => TypePassword(md5($password))
-        ), " `id` = '".$row['id']."' ");
-    }
     if($row['money'] != $money)
     {
         $CMSNT->insert("dongtien", array(
@@ -105,6 +99,7 @@ if(isset($_POST['btnSaveUser']) && isset($_GET['id']) && $getUser['level'] == 'a
         ));
     }
     $CMSNT->update("users", array(
+        'password'      => TypePassword($password),
         'otp'           => $otp,
         'token'         => $token,
         'money'         => $money,

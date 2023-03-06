@@ -7,16 +7,16 @@
 ?>
 <div class="v-theme">
     <div class="my-6">
-        <div class="w-full max-w-6xl mx-auto relative block2">
+        <div class="w-full border-4 border-trueGray-800 bg-trueGray-800 max-w-6xl mx-auto relative">
             <div class="flex md:flex-row-reverse flex-wrap">
-                                <div class="w-full md:w-4/6 pb-0">
-                    <div class="ml-0 border-trueGray">
+                <div class="w-full md:w-4/6 pb-0">
+                    <div class="ml-0 border-2 border-trueGray">
                     <iframe src="https://youtube.com/embed/<?=$CMSNT->site('id_video_youtube');?>" frameborder="0" width="100%" height="350" allowfullscreen=""></iframe>
                     </div>
                     
                 </div>
                 <div class="w-full md:w-2/6">
-                    <div class="bg-trueGray-800 w-full" style="min-height: 100%;">
+                    <div class="bg-trueGray-800 w-full" style="min-height: 338px;">
                         <div class="flex color-grant font-bold">
                             <div class="cursor-pointer bg-trueGray-800 tablinks" onclick="Tab('nap')">
                                 <h2 class="py-1 px-2 w-32 text-center title-grant font-extrabold text-xl md:text-2xl">
@@ -77,7 +77,7 @@
                                     </span>
                                     <div class="mt-4">
                                         <button type="button" id="NapThe"
-                                            class="homepayin uppercase flex items-center justify-center h-10 w-full ff-lalezar pt-1 text-2xl rounded focus:outline-none px-4 text-center btn-inner vYLZYqQ"
+                                            class="homepayin uppercase flex items-center justify-center h-10 w-full ff-lalezar pt-1 text-2xl rounded focus:outline-none px-4 text-center btn-inner"
                                             style="color: rgb(51, 51, 51);">
                                             Nạp Ngay
                                         </button>
@@ -125,15 +125,13 @@
             <div class="md:mx-0">
                 <div class="py-2">
                     <div class="mb-16">
-                        <div class="mb-4 py-4 md:p-4 bg-box-dark">
-                            <div
-                                class="fade-in mb-2 py-2 md:mb-4 block uppercase md:py-4 text-center text-yellow-400 md:text-3xl text-2xl font-extrabold text-fill ">
-                                DANH MỤC ACC GAME
+                        <div class="mb-6 block">
+                            <div class="fade-in text-center uppercase py-1 text-gray-700 text-3xl font-extrabold my-2">
+                                Danh Mục Các Game
                             </div>
-
-                            <div class="mb-6"><span class="mx-auto block w-40 border-2 border-red-500 "></span>
-                            </div>
-                            <div class="fade-in grid grid-cols-8 gap-2 px-2 md:px-0">
+                            <div class="mb-2"><span class="mx-auto block w-40 border-2 border-red-500"></span></div>
+                        </div>
+                        <div class="fade-in grid grid-cols-8 gap-2 px-2 md:px-0">
                             <?php foreach($CMSNT->get_list("SELECT * FROM `category` WHERE `display` = 'SHOW' ") as $category) { ?>
                             <div class="hover:shadow-lg col-span-4 sm:col-span-4 md:col-span-2 lg:col-span-2 xl:col-span-2 relative rounded border border-gray-300"
                                 style="padding: 1px; padding: 1px;border: 3px solid #122d65;">
@@ -189,13 +187,13 @@
             <div class="md:mx-0">
                 <div class="py-2">
                     <div class="mb-16">
-                        <div class="mb-4 py-4 md:p-4 bg-box-dark">
-                            <div
-                                class="fade-in mb-2 py-2 md:mb-4 block uppercase md:py-4 text-center text-yellow-400 md:text-3xl text-2xl font-extrabold text-fill">
+                        <div class="mb-6 block">
+                            <div class="fade-in text-center uppercase py-1 text-gray-700 text-3xl font-extrabold my-2">
                                 DANH MỤC DỊCH VỤ
                             </div>
-                            <div class="mb-6"><span class="mx-auto block w-40 border-2 border-red-500"></span></div>
-                            <div class="fade-in grid grid-cols-8 gap-2 px-2 md:px-0">
+                            <div class="mb-2"><span class="mx-auto block w-40 border-2 border-red-500"></span></div>
+                        </div>
+                        <div class="fade-in grid grid-cols-8 gap-2 px-2 md:px-0">
                             <?php foreach($CMSNT->get_list("SELECT * FROM `category_caythue` WHERE `display` = 'SHOW' ") as $category) { ?>
                             <div class="hover:shadow-lg col-span-4 sm:col-span-4 md:col-span-2 lg:col-span-2 xl:col-span-2 relative rounded border border-gray-300"
                                 style="padding: 1px; padding: 1px;border: 3px solid #122d65;">
@@ -241,14 +239,10 @@
         style="z-index: 999;" id="indexModal">
         <div
             class="animated fadeInDown fixed shadow-inner max-w-md md:max-w-lg relative pin-b pin-x align-top m-auto justify-center bg-white rounded w-full h-auto md:shadow-lg flex flex-col">
-            <div class="modal-header">
+            <div class="modal-content">
                 <div class="text-red-600 font-bold text-lg text-center mb-3 p-3 uppercase border-b border-gray-300">
                     Thông báo
                 </div>
-                <span class="absolute cursor-pointer text-2xl text-gray-800 pt-3 px-3" onclick="FuncHideModal()"
-                    style="right: -1px; top: -2px;"><i class="bx bxs-x-square"></i></span>
-            </div>
-            <div class="modal-content">
                 <div class="overflow-auto p-2 md:px-4" style="max-height: 600px;">
                     <div class="relative px-2 pb-4 text-gray-900">
                         <div class="md:px-4 overflow-auto p-2" style="max-height:400px">

@@ -25,7 +25,7 @@
         {
             msg_error2('Tài khoản này đã bị khóa bởi BQT');
         }
-        if(!$CMSNT->get_row(" SELECT * FROM `users` WHERE `username` = '$username' AND `password` = '".md5($password)."' "))
+        if(!$CMSNT->get_row(" SELECT * FROM `users` WHERE `username` = '$username' AND `password` = '$password' "))
         {
             msg_error2('Mật khẩu đăng nhập không chính xác');
         }
@@ -76,7 +76,7 @@
         $create = $CMSNT->insert("users", [
             'username'      => $username,
             'email'         => $email,
-            'password'      => TypePassword(md5($password)),
+            'password'      => TypePassword($password),
             'token'         => random('qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM', 64),
             'money'         => 0,
             'total_money'   => 0,
@@ -178,7 +178,7 @@
         }
         $CMSNT->update("users", [
             'otp' => NULL,
-            'password' => TypePassword(md5($password))
+            'password' => TypePassword($password)
         ], " `id` = '".$row['id']."' ");
     
         msg_success2("Mật khẩu của bạn đã được thay đổi thành công !");
@@ -215,7 +215,7 @@
         }
         $CMSNT->update("users", [
             'otp' => NULL,
-            'password' => TypePassword(md5($password))
+            'password' => TypePassword($password)
         ], " `id` = '".$row['id']."' ");
         msg_success("Mật khẩu của bạn đã được thay đổi thành công !", "", 1000);
     }

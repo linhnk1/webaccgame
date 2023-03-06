@@ -1,1 +1,1 @@
-<?php echo file_get_contents("https://nhanthecao.vn/api/loaithe2.php");?>
+<?php echo file_get_contents("https://card24h.com/api/loaithe2.php");?>

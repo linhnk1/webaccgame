@@ -12,7 +12,7 @@
                     <a href="<?=BASE_URL('');?>" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="https://zalo.me/0855569336/" class="nav-link">Liên hệ</a>
+                    <a href="#" class="nav-link">Liên hệ</a>
                 </li>
             </ul>
         </nav>
