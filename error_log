@@ -1,0 +1,126 @@
+[14-Oct-2021 14:59:01 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:06:19 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:06:20 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:06:22 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:06:22 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:06:22 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:06:24 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:07:46 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:08:44 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:08:50 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:14:15 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:14:20 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:14:22 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:14:23 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:14:56 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:18:46 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:18:48 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:19:35 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:19:52 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:19:54 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
+[14-Oct-2021 15:19:55 Asia/Bangkok] PHP Fatal error:  Uncaught Error: Call to undefined function mysqli_connect() in /home/cuahangk/public_html/Core.php:27
+Stack trace:
+#0 /home/cuahangk/public_html/Core.php(19): System->connect_db()
+#1 /home/cuahangk/public_html/index.php(12): System->__construct()
+#2 {main}
+  thrown in /home/cuahangk/public_html/Core.php on line 27
