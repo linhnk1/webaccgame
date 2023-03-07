@@ -322,7 +322,7 @@ CREATE TABLE `options`  (
 INSERT INTO `options` VALUES (1, 'tenweb', 'SHOP NICK');
 INSERT INTO `options` VALUES (2, 'mota', '');
 INSERT INTO `options` VALUES (3, 'tukhoa', '');
-INSERT INTO `options` VALUES (4, 'logo', 'http://websellacc-env.eba-djpsvcvz.ap-southeast-1.elasticbeanstalk.com/assets/storage/images/upload_4EHCIUFG2VQX.png');
+INSERT INTO `options` VALUES (4, 'logo', 'http://websellacc-env.eba-djpsvcvz.ap-southeast-1.elasticbeanstalk.com/assets/storage/images/Clash_of_Clans_Logo.png');
 INSERT INTO `options` VALUES (5, 'email', '');
 INSERT INTO `options` VALUES (6, 'pass_email', '');
 INSERT INTO `options` VALUES (11, 'noidung_naptien', 'NAPTIEN_');
