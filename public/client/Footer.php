@@ -8,13 +8,12 @@ new ClipboardJS('.copy');
 <div class="flex justify-center py-8 footer-bg" style="border-top: 2px solid rgba(51, 51, 51, 0.25);">
     <div class="container-x w-full text-white flex flex-wrap font-semibold text-gray-300">
         <div class="md:w-1/2 w-full mb-2 px-4 font-bold">
-            HỆ THỐNG BÁN ACC TỰ ĐỘNG
+            HỆ THỐNG BÁN ACC CLASH OF ClANS TỰ ĐỘNG
             <br>
             ĐẢM BẢO UY TÍN VÀ CHẤT LƯỢNG.
         </div>
         <div class="md:w-1/2 w-full mb-2 px-4">
-            CHÚNG TÔI LUÔN LẤY UY TÍN LÀM HÀNG ĐẦU ĐỐI VỚI KHÁCH HÀNG. HI VỌNG SẼ
-            ĐƯỢC PHỤC VỤ CÁC BẠN. CẢM ƠN!
+            CHÚNG TÔI LUÔN LẤY UY TÍN LÀM HÀNG ĐẦU. SỰ HÀI LÒNG CỦA KHÁCH HÀNG LÀ PHẦN THƯỞNG CAO NHẤT. CẢM ƠN!
         </div>
     </div>
 </div>
