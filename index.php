@@ -247,7 +247,7 @@
                     <div class="relative px-2 pb-4 text-gray-900">
                         <div class="md:px-4 overflow-auto p-2" style="max-height:400px">
                             <div class="pb-4 px-2 relative text-gray-900">
-                                <?=$CMSNT->site('thongbao');?>
+                            <iframe src="https://youtube.com/embed/<?=$CMSNT->site('thongbao');?>" frameborder="0" width="100%" height="350" allowfullscreen=""></iframe>
                             </div>
                         </div>
                     </div>

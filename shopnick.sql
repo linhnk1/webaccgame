@@ -322,11 +322,11 @@ CREATE TABLE `options`  (
 INSERT INTO `options` VALUES (1, 'tenweb', 'SHOP NICK');
 INSERT INTO `options` VALUES (2, 'mota', '');
 INSERT INTO `options` VALUES (3, 'tukhoa', '');
-INSERT INTO `options` VALUES (4, 'logo', 'https://i.imgur.com/djvxQX6.png');
+INSERT INTO `options` VALUES (4, 'logo', 'http://websellacc-env.eba-djpsvcvz.ap-southeast-1.elasticbeanstalk.com/assets/storage/images/upload_4EHCIUFG2VQX.png');
 INSERT INTO `options` VALUES (5, 'email', '');
 INSERT INTO `options` VALUES (6, 'pass_email', '');
 INSERT INTO `options` VALUES (11, 'noidung_naptien', 'NAPTIEN_');
-INSERT INTO `options` VALUES (12, 'thongbao', 'https://www.youtube.com/watch?v=zDzz8Tv0pN8');
+INSERT INTO `options` VALUES (12, 'thongbao', 'zDzz8Tv0pN8');
 INSERT INTO `options` VALUES (13, 'anhbia', 'https://lienquanmobile.vn/assets/img/banner.jpg');
 INSERT INTO `options` VALUES (14, 'favicon', 'https://i.imgur.com/61P2d1U.jpg');
 INSERT INTO `options` VALUES (17, 'baotri', 'ON');
