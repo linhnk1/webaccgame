@@ -59,7 +59,7 @@ class CMSNT
             $field_list .= ",$key";
             $value_list .= ",'".mysqli_real_escape_string($this->ketnoi, $value)."'";
         }
-        $sql = 'INSERT INTO '.$table. '('.trim($field_list, ',').') VALUES ('.trim($value_list, ',').')';
+        $sql = 'INSERT INTO `'.$table. '`('.trim($field_list, ',').') VALUES ('.trim($value_list, ',').')';
  
         return mysqli_query($this->ketnoi, $sql);
     }
@@ -71,7 +71,7 @@ class CMSNT
         {
             $sql .= "$key = '".mysqli_real_escape_string($this->ketnoi, $value)."',";
         }
-        $sql = 'UPDATE '.$table. ' SET '.trim($sql, ',').' WHERE '.$where;
+        $sql = 'UPDATE `'.$table. '` SET '.trim($sql, ',').' WHERE '.$where;
         return mysqli_query($this->ketnoi, $sql);
     }
     function update_value($table, $data, $where, $value1)
@@ -81,13 +81,13 @@ class CMSNT
         foreach ($data as $key => $value){
             $sql .= "$key = '".mysqli_real_escape_string($this->ketnoi, $value)."',";
         }
-        $sql = 'UPDATE '.$table. ' SET '.trim($sql, ',').' WHERE '.$where.' LIMIT '.$value1;
+        $sql = 'UPDATE `'.$table. '` SET '.trim($sql, ',').' WHERE '.$where.' LIMIT '.$value1;
         return mysqli_query($this->ketnoi, $sql);
     }
     function remove($table, $where)
     {
         $this->connect();
-        $sql = "DELETE FROM $table WHERE $where";
+        $sql = "DELETE FROM `$table` WHERE $where";
         return mysqli_query($this->ketnoi, $sql);
     }
     function get_list($sql)

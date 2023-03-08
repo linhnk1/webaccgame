@@ -7,7 +7,7 @@
 ?>
 
 <?php
-/* BẢN QUYỀN THUỘC VỀ CMSNT.CO | NTTHANH LEADER NT TEAM */
+/* BẢN QUYỀN THUỘC VỀ ADMIN */
 if(isset($_GET['id']) && $getUser['level'] == 'admin')
 {
     $row = $CMSNT->get_row(" SELECT * FROM `groups` WHERE `id` = '".check_string($_GET['id'])."'  ");
@@ -28,8 +28,7 @@ if(isset($_POST['LuuChuyenMuc']) && $getUser['level'] == 'admin' )
     {
         admin_msg_warning("Chức năng này không khả dụng trên trang web DEMO!", "", 2000);
     }
-    if(check_img('img') == true)
-    {
+    if(check_img('img') == true){
         $rand = random("QWERTYUIOPASDFGHJKLZXCVBNM0123456789", 12);
         $uploads_dir = '../../assets/storage/images';
         $tmp_name = $_FILES['img']['tmp_name'];
@@ -65,7 +64,7 @@ if(isset($_POST['LuuChuyenMuc']) && $getUser['level'] == 'admin' )
             <div class="col-md-6">
                 <div class="card card-outline card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">THÊM NHÓM MỚI</h3>
+                        <h3 class="card-title">SỬA THÔNG TIN NHÓM</h3>
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
                                     class="fas fa-minus"></i>

@@ -17,7 +17,7 @@ function load_tinnhan()
         }
     });
 }
-setInterval(function() { $('#thongbao').load(load_tinnhan()); }, 15000);
+// setInterval(function() { $('#thongbao').load(load_tinnhan()); }, 15000);
 </script>
 
 

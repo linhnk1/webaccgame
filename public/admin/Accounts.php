@@ -7,7 +7,7 @@
 ?>
 
 <?php
-/* BẢN QUYỀN THUỘC VỀ CMSNT.CO | NTTHANH LEADER NT TEAM */
+/* BẢN QUYỀN THUỘC VỀ ADMIN */
 if(isset($_GET['id']) && $getUser['level'] == 'admin')
 {
     $row = $CMSNT->get_row(" SELECT * FROM `groups` WHERE `id` = '".check_string($_GET['id'])."'  ");

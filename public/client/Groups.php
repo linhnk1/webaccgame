@@ -6,7 +6,7 @@
     require_once("../../public/client/Nav.php");
 ?>
 <?php
-/* BẢN QUYỀN THUỘC VỀ CMSNT.CO | NTTHANH LEADER NT TEAM */
+/* BẢN QUYỀN THUỘC VỀ ADMIN */
 if(isset($_GET['id']))
 {
     $row = $CMSNT->get_row(" SELECT * FROM `category` WHERE `id` = '".check_string($_GET['id'])."'  ");
