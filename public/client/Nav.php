@@ -51,7 +51,7 @@
                                 <a href="<?=BASE_URL('Auth/Profile');?>"
                                     class="lg:ml-4 flex border px-3 h-8 border-gray-400 lg:rounded-full items-center text-gray-800 font-bold justify-center lg:mb-0 mb-2 pointer-cursor"><span
                                         class="block"><i class="fa fa-user" aria-hidden="true"></i>
-                                        <?=$_SESSION['username'];?> - <?=format_cash($getUser['money']);?></span></a>
+                                        <?=$_SESSION['username'];?> </span></a>
                                 <a href="<?=BASE_URL('Auth/Logout');?>"
                                     class="lg:ml-4 flex border px-3 h-8 border-gray-400 lg:rounded-full items-center text-gray-800 font-bold justify-center lg:mb-0 mb-2 pointer-cursor"><span
                                         class="block"><i class="fa fa-sign-out" aria-hidden="true"></i> Đăng
