@@ -1,6 +1,6 @@
 <?php
 session_start();
-$base_url = 'http://websellcoc.ap-southeast-1.elasticbeanstalk.com//'; // Thay url web bạn
+$base_url = 'http://websellcoc.ap-southeast-1.elasticbeanstalk.com/'; // Thay url web bạn
 class CMSNT
 {
     private $ketnoi;
