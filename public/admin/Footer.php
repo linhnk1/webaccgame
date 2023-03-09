@@ -25,7 +25,7 @@ function load_tinnhan()
 <script src="<?=BASE_URL('template/');?>plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="<?=BASE_URL('template/');?>plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- ĐƠN VỊ THIẾT KẾ WEB PANTHERA -->
+<!-- ĐƠN VỊ THIẾT KẾ WEB WWW.CMSNT.CO | ZALO: 0947838128 | FACEBOOK: FB.COM/NTGTANETWORK -->
 <script>
 $.widget.bridge('uibutton', $.ui.button)
 </script>
@@ -63,7 +63,7 @@ $.widget.bridge('uibutton', $.ui.button)
 <script src="<?=BASE_URL('template/');?>plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="<?=BASE_URL('template/');?>plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="<?=BASE_URL('template/');?>plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<!-- ĐƠN VỊ THIẾT KẾ WEB PANTHERA -->
+<!-- ĐƠN VỊ THIẾT KẾ WEB WWW.CMSNT.CO | ZALO: 0947838128 | FACEBOOK: FB.COM/NTGTANETWORK -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
 <script>
 new ClipboardJS('.copy');

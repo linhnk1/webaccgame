@@ -18,17 +18,16 @@
                 <div class="w-full md:w-2/6">
                     <div class="bg-trueGray-800 w-full" style="min-height: 338px;">
                         <div class="flex color-grant font-bold">
-                            <div class="cursor-pointer bg-trueGray-800 tablinks" onclick="Tab('nap')">
-                                <h2 class="py-1 px-2 w-32 text-center title-grant font-extrabold text-xl md:text-2xl">
-                                    NẠP THẺ
-                                </h2>
-                            </div>
-                            <div class="cursor-pointer w-full bg-trueGray-900 tablinks" onclick="Tab('top')">
+                                <div class="cursor-pointer w-full bg-trueGray-900 tablinks" onclick="Tab('top')">
+                                    <h2 class="py-1 text-center px-3 title-grant font-extrabold text-xl md:text-2xl">
+                                        TOP ACCOUNT </h2>
+                                </div>
+                            <!-- <div class="cursor-pointer w-full bg-trueGray-900 tablinks" onclick="Tab('top')">
                                 <h2 class="py-1 text-center px-3 title-grant font-extrabold text-xl md:text-2xl">
-                                    TOP NẠP TIỀN </h2>
-                            </div>
+                                    TOP ACCOUNT </h2>
+                            </div> -->
                         </div>
-                        <span class="tabcontent" id="nap" style="display:block;">
+                        <!-- <span class="tabcontent" id="top">
                             <form class="w-full form-header">
                                 <div class="py-3 px-5">
                                     <span class="mb-2 block">
@@ -88,11 +87,11 @@
                                 </div>
                             </form>
 
-                        </span>
-                        <div class="tabcontent" id="top">
+                        </span> -->
+                        <div class="tabcontent" id="top" style="display:block;">
                             <div class="v-list-top-card py-1 mt-2 md:py-2 px-1 md:px-3">
 
-                                <?php $i=0; foreach($CMSNT->get_list("SELECT * FROM `users` ORDER BY `total_money` DESC LIMIT 6 ") as $top) { ?>
+                                <?php $i=0; foreach($CMSNT->get_list("SELECT * FROM `ACCOUNTS` ORDER BY `money` DESC LIMIT 6 ") as $top) { ?>
                                 <div class="flex items-center justify-between px-2 py-1">
                                     <div class="flex items-center">
                                         <div class="v-star relative">
@@ -102,12 +101,12 @@
                                         </div>
                                         <span class="ml-1 text-white w-full font-bold truncate"
                                             style="max-width: 8rem;">
-                                            <?=$top['username'];?>
+                                            <?=$top['account'];?>
                                         </span>
                                     </div>
                                     <div class="font-bold text-lg">
                                         <span class="bg-red-600 w-32 text-white rounded-sm text-center inline-block">
-                                            <?=format_cash($top['total_money']);?> <span
+                                            <?=format_cash($top['money']);?> <span
                                                 class="text-xs"><small>VND</small></span>
                                         </span>
                                     </div>
@@ -127,28 +126,30 @@
                     <div class="mb-16">
                         <div class="mb-6 block">
                             <div class="fade-in text-center uppercase py-1 text-gray-700 text-3xl font-extrabold my-2">
-                                Danh Mục Các Game
+                                Danh Mục Các Town Hall
                             </div>
                             <div class="mb-2"><span class="mx-auto block w-40 border-2 border-red-500"></span></div>
                         </div>
                         <div class="fade-in grid grid-cols-8 gap-2 px-2 md:px-0">
-                            <?php foreach($CMSNT->get_list("SELECT * FROM `category` WHERE `display` = 'SHOW' ") as $category) { ?>
+                            <?php //foreach($CMSNT->get_list("SELECT * FROM `category` WHERE `display` = 'SHOW' ") as $category) { ?>
+                                <?php foreach($CMSNT->get_list("SELECT * FROM `groups` WHERE `display` = 'SHOW' AND `category` = '3'  ") as $group) { ?>
                             <div class="hover:shadow-lg col-span-4 sm:col-span-4 md:col-span-2 lg:col-span-2 xl:col-span-2 relative rounded border border-gray-300"
                                 style="padding: 1px; padding: 1px;border: 3px solid #122d65;">
                                 <!---->
-                                <a href="<?=BASE_URL('Groups/'.$category['id']);?>">
-                                    <img data-src="<?=BASE_URL($category['img']);?>"
+                                <a href="<?=BASE_URL('Accounts/'.$group['id']);?>">
+                                    <img data-src="<?=BASE_URL($group['img']);?>"
                                         class="rounded-t h-28 md:h-48 w-full object-fill object-center lazyLoad" />
                                     <div class="py-1">
                                         <div class="py-1 font-bold text-md px-1 truncate text-center uppercase"
                                             style="color: rgb(247, 176, 60);">
-                                            <?=$category['title'];?>
+                                            <?=$group['title'];?>
                                         </div>
                                         <ul
                                             class="px-2 flex items-center justify-center font-medium rounded-sm w-full font-medium text-gray-700">
                                             <span>
                                                 Số tài khoản:
-                                                <b>8,876 </b>
+                                                <b><?=format_cash($CMSNT->num_rows("SELECT * FROM `accounts` WHERE `groups` = '".$group['id']."' AND `username` IS NULL "));?>
+                                                </b>
                                             </span>
                                             <!---->
                                         </ul>
@@ -158,7 +159,7 @@
                                         </div>
                                         <div class="mt-2 mb-2 px-2 py-1 flex items-center justify-center mt-9">
                                             <a class="focus:outline-none acc-lien-minh-tu-chon-bb2716012b"
-                                                href="<?=BASE_URL('Groups/'.$category['id']);?>">
+                                                href="<?=BASE_URL('Accounts/'.$group['id']);?>">
                                                 <div>
                                                     <style scoped="">
                                                     .acc-lien-minh-tu-chon-bb2716012b:hover {
@@ -247,7 +248,7 @@
                     <div class="relative px-2 pb-4 text-gray-900">
                         <div class="md:px-4 overflow-auto p-2" style="max-height:400px">
                             <div class="pb-4 px-2 relative text-gray-900">
-                            <iframe src="https://youtube.com/embed/<?=$CMSNT->site('thongbao');?>" frameborder="0" width="100%" height="350" allowfullscreen=""></iframe>
+                                <?=$CMSNT->site('thongbao');?>
                             </div>
                         </div>
                     </div>

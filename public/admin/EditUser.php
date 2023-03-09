@@ -71,7 +71,7 @@ if(isset($_POST['btnTruTien']) && isset($_POST['value']) && isset($row['username
     }
     else
     {
-        admin_msg_error("Vui lòng liên hệ kỹ thuật Zalo 0947838128", "", 12000);
+        admin_msg_error("Vui lòng liên hệ kỹ thuật Zalo 0984848592", "", 12000);
     }
     
 }
