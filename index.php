@@ -137,7 +137,7 @@
                                 style="padding: 1px; padding: 1px;border: 3px solid #122d65;">
                                 <!---->
                                 <a href="<?=BASE_URL('Accounts/'.$group['id']);?>">
-                                    <img data-src="<?=BASE_URL($group['img']);?>"
+                                    <img data-src="<?=$group['img'];?>"
                                         class="rounded-t h-28 md:h-48 w-full object-fill object-center lazyLoad" />
                                     <div class="py-1">
                                         <div class="py-1 font-bold text-md px-1 truncate text-center uppercase"
