@@ -91,7 +91,7 @@
                         <div class="tabcontent" id="top" style="display:block;">
                             <div class="v-list-top-card py-1 mt-2 md:py-2 px-1 md:px-3">
 
-                                <?php $i=0; foreach($CMSNT->get_list("SELECT * FROM `ACCOUNTS` ORDER BY `money` DESC LIMIT 6 ") as $top) { ?>
+                                <?php $i=0; foreach($CMSNT->get_list("SELECT * FROM `accounts` ORDER BY `money` DESC LIMIT 6 ") as $top) { ?>
                                 <div class="flex items-center justify-between px-2 py-1">
                                     <div class="flex items-center">
                                         <div class="v-star relative">
