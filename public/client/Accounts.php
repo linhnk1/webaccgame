@@ -137,7 +137,7 @@ $listAccount = $CMSNT->get_list("SELECT * FROM `accounts` WHERE `groups` = '".$r
                             <a href="<?=BASE_URL('Orders/'.$acc['id']);?>">
                                 <div class="relative">
                                     <img class="h-56 md:h-40 w-full object-fill object-center lazyLoad"
-                                        data-src="<?=$acc['img'];?>" />
+                                        data-src="<?=$base_url.substr($acc['img'], 3);?>" />
                                     <span
                                         class="absolute v-text-1 bg-red-700 text-white font-bold text-sm inline-block px-2 rounded-sm"
                                         style="right: 5px; top: 5px;">#<?=$acc['id'];?></span>
