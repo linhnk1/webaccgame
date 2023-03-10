@@ -64,6 +64,16 @@ if(isset($_POST['ThemTaiKhoan']) && $getUser['level'] == 'admin' )
     
     admin_msg_success("Thêm tài khoản thành công", '', 500);
 }
+if(isset($_POST['XoaChuyenMuc']) && $getUser['level'] == 'admin' )
+{
+    if($CMSNT->site('status_demo') == 'ON')
+    {
+        admin_msg_warning("Chức năng này không khả dụng trên trang web DEMO!", "", 2000);
+    }
+    $delete_id = check_string($_POST['id_delete']);
+    $CMSNT->remove("accounts", " `id` = '$delete_id' ");
+    admin_msg_success("Xóa thành công", '', 500);
+}
 ?>
 
 
@@ -210,6 +220,9 @@ if(isset($_POST['ThemTaiKhoan']) && $getUser['level'] == 'admin' )
                                                 href="<?=BASE_URL('Admin/Account/Edit/'.$row['id']);?>"><i
                                                     class="fas fa-edit"></i>
                                                 <span>EDIT</span></a>
+                                            <button class="btn btn-danger btnDelete" data-title="<?=$row['account'];?>"
+                                                data-id="<?=$row['id'];?>"><i class="fas fa-trash"></i>
+                                                <span>XÓA</span></button>
                                         </td>
                                     </tr>
                                     <?php }?>
@@ -224,9 +237,48 @@ if(isset($_POST['ThemTaiKhoan']) && $getUser['level'] == 'admin' )
     </section>
     <!-- /.content -->
 </div>
+<!-- Modal Delete-->
+<div class="modal fade" id="staticDelete" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticDeleteLabel">XÓA TÀI KHOẢN</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="" method="POST" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Xóa Account</label>
+                        <div class="col-sm-8">
+                            <div class="form-line">
+                                <input type="hidden" name="id_delete" id="id_delete" class="form-control" required>
+                                <span name="title_delete" id="title_delete"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" name="XoaChuyenMuc" class="btn btn-danger">Xóa ngay</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
 
-
-
+<script type="text/javascript">
+$('.btnDelete').on('click', function(e) {
+    var btn = $(this);
+    $("#title_delete").text(btn.attr("data-title"));
+    $("#id_delete").val(btn.attr("data-id"));
+    $("#staticDelete").modal();
+    return false;
+});
+</script>
 
 <script>
 $(function() {

@@ -22,7 +22,7 @@ if(isset($_POST['ThemChuyenMuc']) && $getUser['level'] == 'admin' )
         $create = move_uploaded_file($tmp_name, $uploads_dir.$url_img);
     }
     $CMSNT->insert("category", array(
-        'img'       => '/assets/storage/images'.$url_img,
+        'img'   => BASE_URL('assets/storage/images'.$url_img),
         'title' => check_string($_POST['title']),
         'display' => check_string($_POST['display'])
     ));
@@ -42,7 +42,7 @@ if(isset($_POST['LuuChuyenMuc']) && $getUser['level'] == 'admin' )
         $url_img = "/category_".$rand.".png";
         $create = move_uploaded_file($tmp_name, $uploads_dir.$url_img);
         $CMSNT->update("category", array(
-            'img'       => '/assets/storage/images'.$url_img
+            'img'       => BASE_URL('assets/storage/images'.$url_img)
         ), " `id` = '".check_string($_POST['id'])."' ");
     }
     $CMSNT->update("category", array(
@@ -50,6 +50,16 @@ if(isset($_POST['LuuChuyenMuc']) && $getUser['level'] == 'admin' )
         'display' => check_string($_POST['display'])
     ), " `id` = '".check_string($_POST['id'])."' ");
     admin_msg_success("Lưu thành công", '', 500);
+}
+if(isset($_POST['XoaChuyenMuc']) && $getUser['level'] == 'admin' )
+{
+    if($CMSNT->site('status_demo') == 'ON')
+    {
+        admin_msg_warning("Chức năng này không khả dụng trên trang web DEMO!", "", 2000);
+    }
+    $delete_id = check_string($_POST['id_delete']);
+    $CMSNT->remove("category", " `id` = '$delete_id' ");
+    admin_msg_success("Xóa thành công", '', 500);
 }
 ?>
 
@@ -132,7 +142,7 @@ if(isset($_POST['LuuChuyenMuc']) && $getUser['level'] == 'admin' )
                                     <tr>
                                         <th>STT</th>
                                         <th>ẢNH</th>
-                                        <th>TÊN CHUYÊN MỤC</th>
+                                        <th>TÊN GAME</th>
                                         <th>HIỂN THỊ</th>
                                         <th>THAO TÁC</th>
                                     </tr>
@@ -151,7 +161,10 @@ if(isset($_POST['LuuChuyenMuc']) && $getUser['level'] == 'admin' )
                                             <button class="btn btn-primary btnEdit" data-title="<?=$row['title'];?>"
                                                 data-display="<?=$row['display'];?>" data-id="<?=$row['id'];?>"><i
                                                     class="fas fa-edit"></i>
-                                                <span>EDIT</span></button>
+                                                <span>SỬA</span></button>
+                                            <button class="btn btn-danger btnDelete" data-title="<?=$row['title'];?>"
+                                                data-id="<?=$row['id'];?>"><i class="fas fa-trash"></i>
+                                                <span>XÓA</span></button>    
 
                                             <a type="button" href="<?=BASE_URL('Admin/Groups/');?><?=$row['id'];?>"
                                                 class="btn btn-info"><i class="fas fa-file-medical"></i>
@@ -173,7 +186,7 @@ if(isset($_POST['LuuChuyenMuc']) && $getUser['level'] == 'admin' )
 
 
 
-<!-- Modal -->
+<!-- Modal Edit-->
 <div class="modal fade" id="staticBackdrop" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -226,6 +239,38 @@ if(isset($_POST['LuuChuyenMuc']) && $getUser['level'] == 'admin' )
     </div>
 </div>
 <!-- Modal -->
+<!-- Modal Delete-->
+<div class="modal fade" id="staticDelete" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticDeleteLabel">XÓA CHUYÊN MỤC</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="" method="POST" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Xóa chuyên mục</label>
+                        <div class="col-sm-8">
+                            <div class="form-line">
+                                <input type="hidden" name="id_delete" id="id_delete" class="form-control" required>
+                                <span name="title_delete" id="title_delete"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" name="XoaChuyenMuc" class="btn btn-danger">Xóa ngay</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
 
 <script type="text/javascript">
 $('.btnEdit').on('click', function(e) {
@@ -234,6 +279,13 @@ $('.btnEdit').on('click', function(e) {
     $("#display").val(btn.attr("data-display"));
     $("#id").val(btn.attr("data-id"));
     $("#staticBackdrop").modal();
+    return false;
+});
+$('.btnDelete').on('click', function(e) {
+    var btn = $(this);
+    $("#title_delete").text(btn.attr("data-title"));
+    $("#id_delete").val(btn.attr("data-id"));
+    $("#staticDelete").modal();
     return false;
 });
 </script>
