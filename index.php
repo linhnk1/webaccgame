@@ -99,9 +99,10 @@
                                             <span class="absolute font-bold text-white" style="top: 4px; left: 11px;">
                                                 <?=$i++;?> </span>
                                         </div>
+                                        <?php $myArray = explode('|', $top['account']);  ?>
                                         <span class="ml-1 text-white w-full font-bold truncate"
                                             style="max-width: 8rem;">
-                                            <?=$top['account'];?>
+                                            <?=$myArray[0];?>
                                         </span>
                                     </div>
                                     <div class="font-bold text-lg">
